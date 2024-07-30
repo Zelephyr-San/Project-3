@@ -12,12 +12,14 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .logo img {
-    max-width: 80px;
+    max-width: 200px;
     height: auto;
+    justify-content: center
+    
 }
 
 .recherche {
@@ -26,6 +28,7 @@ header {
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+    filter: drop-shadow(0px 3px 15px rgba(0,0,0,0.1));
 }
 
 .icone {
@@ -33,12 +36,29 @@ header {
 }
 
 .champ-recherche input {
-    width: 100%;
-    padding: 10px;
+    padding: 8px;
     border: none;
-    border-radius: 5px;
+    background-color: #EBE6EB;
+    
+} 
+.Titre1 {
+    font-size: 12px;
+    padding-top: 30px;
+    text-align: center;
+    align-items: center;
 }
 
+.Titre1 h1 {
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-left: 43px;
+    padding-right: 43px;
+}
+.Titre1 h2 {
+    font-weight: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 /* Media Queries pour les écrans plus grands */
 @media (min-width: 600px) {
     .recherche {
