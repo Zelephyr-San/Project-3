@@ -24,11 +24,12 @@ body {
 .main-container {
     width: 100%;
     padding: 20px;
+    display: flex;
+    text-align: center;
 
     .Titre1 {
         font-size: 14px;
         padding-top: 30px;
-        text-align: center;
 
         h1 {
             font-weight: bold;
@@ -72,7 +73,7 @@ body {
         max-width: 600px;
 
         .icone {
-            margin-right: 10px;
+            margin-right: 1px;
         }
 
         .champ-recherche input {
@@ -86,6 +87,70 @@ body {
     }
 
 }
+
+.fonction-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+
+    .fonction-section h3 {
+        font-weight: bold;
+    }
+
+
+    .fonctions {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .fonctions :hover {
+            background-color: #DEEBFF;
+            border-radius: 25px;
+        }
+
+        .fonction {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            width: auto;
+
+            .fonction img {
+                width: 30px;
+                margin-right: 10px;
+            }
+
+            .fonction span {
+                font-size: 14px;
+            }
+
+            .fonction-section p {
+                margin-right: 10px;
+                font-weight: bold;
+            }
+
+            .fonction .icone-fonction i {
+                margin-right: 5px;
+                font-size: 18px;
+            }
+
+            .icone-fonction {
+                border: 3px solid #f2f2f2;
+                background: white;
+                padding: 10px;
+                border-radius: 25px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
 
 
 
