@@ -151,6 +151,87 @@ body {
 }
 
 
+.titre-resto h3 {
+    font-weight: bold;
+    padding: 20px;
+    background: #f5f0f5;
+
+    .card-main {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        background: #f5f0f5;
+
+        .cards {
+            display: grid;
+            gap: 30px;
+            align-items: center;
+            height: 100%;
+
+            .card {
+                background-color: #ffffff;
+                border-radius: 20px;
+                box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+                align-content: center;
+
+                .card section {
+                    background-color: var(--main-bg-color);
+                    border-radius: 20px;
+                    padding: 30px;
+                }
+
+                .card img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                }
+
+                .card .card-content {
+                    padding-top: 5px;
+                }
+
+                .card .card-title {
+                    font-size: 16px;
+                    margin-top: 0px;
+                    padding-left: 15px;
+                }
+
+                .card .card-subtitle {
+                    margin-bottom: 0px;
+                    padding-left: 15px;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+.footer {
+    background: #2e2e2e;
+    padding: 20px;
+
+    .footer img {
+        padding-bottom: 10px;
+    }
+
+    .footer-list {
+        color: rgba(255, 255, 255, 0.861);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+
+
 
 
 
