@@ -1,8 +1,13 @@
-@charset "UTF-8";
+/* Page index */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 body {
@@ -26,6 +31,7 @@ body header .logo img {
   display: flex;
   text-align: center;
   flex-direction: column;
+  align-items: center;
 }
 .main-container .Titre1 {
   font-size: 14px;
@@ -53,6 +59,9 @@ body header .logo img {
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  width: 70%;
+  display: flex;
+  justify-content: center;
 }
 
 .search-container {
@@ -113,8 +122,8 @@ body header .logo img {
   padding-bottom: 30px;
 }
 .fonction-section .fonctions .fonction span {
-  font-size: 14px;
-  text-align: center;
+  font-size: 17px;
+  margin-left: 50px;
 }
 .fonction-section .fonctions .fonction p {
   background: #9356dc;
@@ -133,6 +142,9 @@ body header .logo img {
   margin-right: 5px;
   font-size: 18px;
   color: grey;
+  position: absolute;
+  margin-left: 10px;
+  transition: color 0.3s ease;
 }
 .fonction-section .fonctions .fonction .icone-fonction {
   border: 1px solid #f2f2f2;
@@ -143,6 +155,10 @@ body header .logo img {
   display: flex;
   width: 100%;
   box-shadow: 0 7px 15px -5px rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+.fonction-section .fonctions .fonction .icone-fonction:hover i {
+  color: #9356dc;
 }
 
 .Bcommande {
@@ -165,54 +181,70 @@ body header .logo img {
   cursor: pointer;
 }
 
-.titre-resto h3 {
+.titre-resto h2 {
   font-weight: bold;
   padding: 20px;
   background: #f5f0f5;
 }
 
-.card-main {
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
-  background: #f5f0f5;
+/* Restaurant */
+.main__card-resto {
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #f5f0f5;
 }
-.card-main .cards {
-  display: grid;
-  gap: 30px;
-  align-items: center;
-  height: 100%;
+.main__card-resto .cards h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
 }
-.card-main .cards .card {
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-  align-content: center;
+
+.card {
+  padding: 10px;
 }
-.card-main .cards .card .card section {
-  background-color: var(--main-bg-color);
-  border-radius: 20px;
-  padding: 30px;
+.card .list-resto {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
-.card-main .cards .card img {
+.card img {
   width: 100%;
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
-.card-main .cards .card .card-content {
-  padding-top: 5px;
+.card .card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
-.card-main .cards .card .card-title {
+.card .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.card .card-subtitle {
   font-size: 16px;
-  margin-top: 0px;
-  padding-left: 15px;
+  color: #666;
 }
-.card-main .cards .card .card-subtitle {
-  margin-bottom: 0px;
-  padding-left: 15px;
+.card .coeur {
+  font-size: 20px;
+  color: #e74c3c;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
 
 /* Page Menu */
@@ -238,11 +270,12 @@ body header .logo img {
   width: 150px;
 }
 
-img {
+.cover-resto img {
   max-width: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 300px;
 }
 
 .main-menu {
@@ -295,6 +328,81 @@ img {
   bottom: 0;
 }
 
+.lists {
+  padding: 10px;
+}
+.lists .list-card {
+  background-color: white;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out, padding-right 0.3s ease-in-out;
+}
+.lists .list-card .animation-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #75d8b1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+}
+.lists .list-card .animation-block i {
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.lists .list-card:hover {
+  border-color: #ddd;
+  padding-right: 60px;
+}
+.lists .list-card:hover .animation-block {
+  transform: scaleX(1);
+}
+.lists .list-card:hover .animation-block i {
+  opacity: 1;
+}
+.lists .list-card .list-content {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+.lists .list-card .price {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+.lists .list-content {
+  width: 100%;
+}
+.lists .list-title {
+  justify-content: flex-start;
+}
+.lists .list-subtitle {
+  justify-content: flex-start;
+}
+.lists .price {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+}
+
 .footer {
   background: #2e2e2e;
   padding: 20px;
@@ -315,37 +423,7 @@ img {
   list-style: none;
 }
 
-.lists {
-  padding: 10px;
-}
-.lists .list-card {
-  background-color: white;
-  display: flex;
-  border-radius: 15px;
-  overflow: hidden;
-  box-sizing: border-box;
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
-}
-.lists .list-card .list-content {
-  width: 100%;
-}
-.lists .list-card .list-title {
-  justify-content: flex-start;
-}
-.lists .list-card .list-subtitle {
-  justify-content: flex-start;
-}
-.lists .list-card .price {
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: auto;
-}
-
-/* Media Queries pour les écrans plus grands */
+/* Media Queries index */
 @media (min-width: 600px) {
   .recherche {
     max-width: 500px;
