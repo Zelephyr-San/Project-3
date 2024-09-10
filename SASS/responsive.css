@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/* --- responsive.scss --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- 1. HEADER --- */
+/* Ajout des styles pour des écrans plus grands (tablettes et desktop) */
+@media (min-width: 1024px) {
+  .header .logo img {
+    width: 200px;
+  }
+}
+/* --- 2. BARRE DE RECHERCHE --- */
+/* Responsiveness pour la barre de recherche */
+@media (min-width: 1024px) {
+  .champ-recherche input {
+    width: 400px;
+  }
+}
+/* --- 3. CONTENU PRINCIPAL --- */
+/* Titres et boutons principaux */
+@media (min-width: 1024px) {
+  .Titre1 h1 {
+    font-size: 48px;
+  }
+  .Titre1 h2 {
+    font-size: 32px;
+  }
+  .button {
+    width: 300px;
+    font-size: 24px;
+  }
+}
+/* --- 4. SECTION FONCTIONNEMENT --- */
+/* Responsiveness pour la section fonctionnement */
+@media (min-width: 1024px) {
+  .fonction-section .fonctions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .fonction {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .fonction p {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .titre-fonction h1 {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .fonction span {
+    font-weight: bold;
+    width: 100%;
+  }
+}
+/* --- 5. RESTAURANTS --- */
+@media (min-width: 1024px) {
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #f5f0f5;
+  }
+  .main__card-resto {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f5f0f5;
+  }
+  .card .image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+  .card .image-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .titre-resto h2 {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-top: 10px;
+  }
+}
+/* --- 6. FOOTER --- */
+/* Responsiveness pour le footer */
+@media (min-width: 1024px) {
+  .footer {
+    background: #2e2e2e;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer span {
+    color: white;
+    text-decoration: none;
+  }
+  .footer .logo-img {
+    font-size: 16px;
+    color: white;
+    font-family: "Shrikhand", cursive;
+    padding: 2px;
+    margin-left: 20px;
+  }
+  .footer .footer-list {
+    color: rgba(255, 255, 255, 0.861);
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    gap: 20px;
+    margin-left: auto;
+  }
+  .footer .footer-list li {
+    list-style: none;
+  }
+}
+/* --- PAGE RESTAURANT --- */
+/* --- 1. HEADER --- */
+/* Ajout des styles pour des écrans plus grands (tablettes et desktop) */
+@media (min-width: 1024px) {
+  .main-menu {
+    width: 80%;
+    max-width: 900px;
+    margin: -35px auto;
+    height: 110px;
+  }
+  .main-menu .menu-titre {
+    display: flex;
+    justify-content: center;
+  }
+  .main-menu .menu-titre .coeur {
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+    top: 0px;
+    right: -15px;
+  }
+}
+/* --- 2. Menu --- */
+@media (min-width: 1024px) {
+  .menu-lists {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  .lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-title h3 {
+    padding-left: 180px; /* Ajuste cette valeur pour aligner avec le début des cartes */
+    margin: 0;
+    font-size: 18px; /* Taille du texte du titre */
+    text-align: left; /* Assure que le texte est bien aligné à gauche */
+  }
+  .menu-title h3 h3::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 3px;
+    background-color: #99e2d0;
+    position: relative none;
+    left: 0;
+    bottom: 0;
+  }
+  .list-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Légère ombre pour un effet de carte */
+    width: 500px;
+  }
+}
+/* --- 3. ANIMATION --- */
+@media (min-width: 1024px) {
+  .lists {
+    padding: 10px;
+  }
+  .lists .list-card {
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    /* Cacher la checkbox mais permettre l'interaction */
+    /* Bloc d'animation vert */
+    /* Lorsque la checkbox est cochée */
+    /* Coche blanche visible après l'animation */
+    /* Le prix est déplacé suffisamment pour être hors du bloc vert */
+    /* Lorsque le prix bouge, le contenu reste dans son cadre mais se rétrécit */
+  }
+  .lists .list-card input.plat-toggle {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  .lists .list-card .list-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Le contenu occupe tout l'espace restant */
+    overflow: hidden;
+    /* Empêcher le chevauchement avec le prix */
+  }
+  .lists .list-card .list-title,
+  .lists .list-card .list-subtitle {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 1;
+    /* Rétrécir le contenu au lieu de le déplacer */
+    transition: width 0.3s ease-in-out;
+  }
+  .lists .list-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-left: 20px;
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 3;
+  }
+  .lists .list-card .animation-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    /* Bloc vert couvre 15% de la carte */
+    height: 100%;
+    background-color: #75d8b1;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+    /* Centrage et style de l'icône de coche */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lists .list-card .animation-block i {
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .lists .list-card input.plat-toggle:checked ~ .animation-block {
+    transform: scaleX(1);
+  }
+  .lists .list-card input.plat-toggle:checked ~ .animation-block i {
+    opacity: 1;
+  }
+  .lists .list-card input.plat-toggle:checked ~ .price {
+    transform: translateX(-300%);
+  }
+  .lists .list-card input.plat-toggle:checked ~ .list-content .list-title,
+  .lists .list-card input.plat-toggle:checked ~ .list-content .list-subtitle {
+    width: 80%;
+    /* Ajuste la largeur pour permettre au texte de se réduire */
+  }
+}/*# sourceMappingURL=responsive.css.map */

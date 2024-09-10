@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Page index */
 * {
   margin: 0;
@@ -10,6 +11,7 @@ a {
   color: black;
 }
 
+/* Header */
 body {
   font-family: Arial, sans-serif;
 }
@@ -32,6 +34,8 @@ body header .logo img {
   text-align: center;
   flex-direction: column;
   align-items: center;
+  background: #f5f0f5;
+  /* Boutton Explorer nos restaurants */
 }
 .main-container .Titre1 {
   font-size: 14px;
@@ -42,12 +46,14 @@ body header .logo img {
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 25px;
 }
 .main-container .Titre1 h2 {
   font-weight: normal;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 30px;
+  font-size: 18px;
 }
 .main-container .button {
   border: 0;
@@ -59,14 +65,17 @@ body header .logo img {
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-  width: 70%;
+  width: 300px;
   display: flex;
   justify-content: center;
+}
+.main-container .button:hover {
+  filter: brightness(1.2);
 }
 
 .search-container {
   width: 100%;
-  background-color: #EBE6EB;
+  background-color: #efe3e6;
   display: flex;
   justify-content: center;
   padding: 12px 0;
@@ -90,11 +99,11 @@ body header .logo img {
   text-align: center;
 }
 
+/* Fonctionnement */
 .titre-fonction h1 {
-  font-weight: bold;
   padding: 20px;
-  font-size: 20px;
   font-weight: bold;
+  font-size: 23px;
 }
 
 .fonction-section {
@@ -122,7 +131,7 @@ body header .logo img {
   padding-bottom: 30px;
 }
 .fonction-section .fonctions .fonction span {
-  font-size: 17px;
+  font-size: 18px;
   margin-left: 50px;
 }
 .fonction-section .fonctions .fonction p {
@@ -156,38 +165,20 @@ body header .logo img {
   width: 100%;
   box-shadow: 0 7px 15px -5px rgba(0, 0, 0, 0.5);
   align-items: center;
+  background: #f5f0f5;
 }
 .fonction-section .fonctions .fonction .icone-fonction:hover i {
   color: #9356dc;
 }
 
-.Bcommande {
-  display: flex;
-  text-decoration: none;
-  justify-content: center;
-  padding: 32px 0;
-}
-.Bcommande .commande {
-  border: 0;
-  padding: 16px 20px;
-  font-weight: 500;
-  font-size: 16px;
-  border-radius: 100px;
-  color: white;
-  background-color: #686868;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  transition-duration: 0.25s;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
-
+/* Restaurant */
 .titre-resto h2 {
-  font-weight: bold;
   padding: 20px;
+  font-size: 23px;
+  font-weight: bold;
   background: #f5f0f5;
 }
 
-/* Restaurant */
 .main__card-resto {
   max-width: 100%;
   overflow: hidden;
@@ -195,9 +186,10 @@ body header .logo img {
 }
 .main__card-resto .cards h3 {
   font-weight: 400;
-  text-transform: uppercase;
   position: relative;
   padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card {
@@ -210,6 +202,20 @@ body header .logo img {
   box-sizing: border-box;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
+}
+.card .list-resto .image-container {
+  position: relative;
+}
+.card .list-resto .image-container .etiquette {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99e2d0;
+  color: #008766;
+  padding: 7px 12px;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: bold;
 }
 .card img {
   width: 100%;
@@ -237,181 +243,107 @@ body header .logo img {
 }
 .card .card-subtitle {
   font-size: 16px;
-  color: #666;
+  color: #000000;
 }
 .card .coeur {
   font-size: 20px;
-  color: #e74c3c;
+  color: #040404;
   margin-left: 10px;
   display: flex;
   align-items: center;
+  padding: 1px;
 }
 
-/* Page Menu */
-.new-header {
-  padding: 10px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+/* Animation concernant le coeur a coter du titre */
+.heart-toggle {
+  display: none;
+}
+
+.coeur {
   position: relative;
-  z-index: 1000;
-}
-.new-header .header-fleche {
-  position: absolute;
-  left: 40px;
-  height: 24px;
-  width: 21px;
-  top: 50%;
-  display: flex;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: #000;
-}
-.new-header img {
-  align-items: center;
-  width: 150px;
-}
-
-.cover-resto img {
-  max-width: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 300px;
-}
-
-.main-menu {
-  display: flex;
-  flex-direction: column;
-  border-radius: 40px 40px 0 0;
-  background-color: #f6f6f6;
-  position: relative;
-  margin-top: -50px;
-}
-.main-menu .menu-titre {
-  padding: 15px 10px 0px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: Shrikhand, "cursive";
-}
-.main-menu .menu-titre .menu-icon {
-  height: 30px;
-  width: 30px;
-  border: 0 solid transparent;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f6f6f6;
-}
-
-.menu-lists {
-  max-width: 100%;
-  overflow: hidden;
-  padding: 0 16px;
-  padding: 10px;
-  background-color: #f6f6f6;
-}
-.menu-lists .menu-title h3 {
-  font-weight: 400;
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 5px;
-}
-.menu-lists .menu-title h3::after {
-  content: "";
-  display: block;
-  width: 10%;
-  height: 3px;
-  background-color: #99e2d0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.lists {
-  padding: 10px;
-}
-.lists .list-card {
-  background-color: white;
-  display: flex;
-  border-radius: 15px;
-  overflow: hidden;
-  box-sizing: border-box;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
-  position: relative;
-  border: 2px solid transparent;
   cursor: pointer;
-  transition: border-color 0.3s ease-in-out, padding-right 0.3s ease-in-out;
+  font-size: 24px;
 }
-.lists .list-card .animation-block {
+.coeur::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: transparent;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 100%;
-  background-color: #75d8b1;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  z-index: 1;
-}
-.lists .list-card .animation-block i {
-  font-size: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.lists .list-card:hover {
-  border-color: #ddd;
-  padding-right: 60px;
-}
-.lists .list-card:hover .animation-block {
-  transform: scaleX(1);
-}
-.lists .list-card:hover .animation-block i {
-  opacity: 1;
-}
-.lists .list-card .list-content {
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease-in-out;
-}
-.lists .list-card .price {
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease-in-out;
-}
-.lists .list-content {
+  top: 0px;
+  left: 0px;
+  font-size: 21px;
   width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease, background 0.7s ease;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
 }
-.lists .list-title {
-  justify-content: flex-start;
+.heart-toggle:checked + .coeur::before {
+  animation: fillHeart 1s ease forwards, pulseHeart 1s ease 1;
+  background: linear-gradient(360deg, #ff88f3, #9100ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.lists .list-subtitle {
-  justify-content: flex-start;
-}
-.lists .price {
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: auto;
+.heart-toggle:not(:checked) + .coeur::before {
+  animation: pulseDisappear 1s ease forwards;
+  background: linear-gradient(360deg, #ff88f3, #9100ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* Animation de remplissage progressif */
+@keyframes fillHeart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Animation de pulsation */
+@keyframes pulseHeart {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+/* Animation de pulsation et disparition (réduite à 1 seconde) */
+@keyframes pulseDisappear {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3); /* Pulsation */
+  }
+  100% {
+    transform: scale(0); /* Rétrécissement jusqu'à disparition */
+  }
+}
+/* Pied de page */
 .footer {
   background: #2e2e2e;
   padding: 20px;
 }
+.footer a {
+  color: white; /* Assure que les liens sont blancs */
+  text-decoration: none; /* Supprime le soulignement des liens */
+}
+.footer span {
+  color: white; /* Assure que le texte dans les span est blanc */
+  text-decoration: none;
+}
 .footer .logo-img {
   font-size: 16px;
   color: white;
-  font-family: Shrikhand, "cursive";
-  padding: 1px;
+  font-family: "Shrikhand", cursive;
+  padding: 2px;
 }
 .footer .footer-list {
   color: rgba(255, 255, 255, 0.861);
@@ -421,27 +353,4 @@ body header .logo img {
 }
 .footer .footer-list li {
   list-style: none;
-}
-
-/* Media Queries index */
-@media (min-width: 600px) {
-  .recherche {
-    max-width: 500px;
-  }
-}
-@media (min-width: 1024px) {
-  .recherche {
-    max-width: 600px;
-  }
-  .Titre1 {
-    font-size: 16px;
-  }
-  .Titre1 h1,
-  .Titre1 h2 {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-* {
-  outline: 1px solid red;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style_index.css.map */

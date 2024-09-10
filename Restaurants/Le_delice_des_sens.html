@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood</title>
-    <link rel="stylesheet" href="/ohmyfood/SASS/style.css">
+    <link rel="stylesheet" href="/ohmyfood/SASS/style_resto.css">
+    <link rel="stylesheet" href="/ohmyfood/SASS/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,129 +28,148 @@
             <div class="container">
                 <div class="menu-titre">
                     <h2>Le délice des sens</h2>
-                    <button class="menu-icon">
-                        <i class="far fa-heart btn-heart--outline"></i>
-                    </button>
+                    <input type="checkbox" id="heart-toggle-0" class="heart-toggle">
+                    <label for="heart-toggle-0" class="coeur">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                    </label>
                 </div>
             </div>
         </section>
         <!-- Entrées -->
-
         <div class="menu-lists">
             <div class="menu-title">
                 <h3>Entrées</h3>
                 <section class="lists">
                     <div class="list-card">
+                        <input type="checkbox" id="plat-1" class="plat-toggle">
+                        <div class="animation-block">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                         <div class="list-content">
                             <h4 class="list-title">Tartare de thon</h4>
                             <span class="list-subtitle">Assaisonné au yuzu</span>
                         </div>
                         <span class="price">25€</span>
+                    </div>
+
+                    <div class="list-card">
+                        <input type="checkbox" id="plat-2" class="plat-toggle">
                         <div class="animation-block">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </div>
-                    <div class="list-card">
                         <div class="list-content">
                             <h4 class="list-title">Bouchée de homard croustillant</h4>
                             <span class="list-subtitle">Et sa farandole de petits légumes</span>
                         </div>
                         <span class="price">35€</span>
+                    </div>
+
+                    <div class="list-card">
+                        <input type="checkbox" id="plat-3" class="plat-toggle">
                         <div class="animation-block">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </div>
-                    <div class="list-card">
                         <div class="list-content">
                             <h4 class="list-title">Velouté de cèpes</h4>
                             <span class="list-subtitle">Aux truffes</span>
                         </div>
                         <span class="price">20€</span>
-                        <div class="animation-block">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
                     </div>
                 </section>
             </div>
         </div>
-        <!-- plats -->
 
+
+        <!-- Plats -->
         <div class="menu-lists">
             <div class="menu-title">
                 <h3>Plats</h3>
                 <section class="lists">
                     <div class="list-card">
+                        <input type="checkbox" id="plat-4" class="plat-toggle">
+                        <div class="animation-block">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                         <div class="list-content">
                             <h4 class="list-title">Poulet rôti aux herbes de Provence</h4>
                             <span class="list-subtitle">Et sa crème de truffe</span>
                         </div>
                         <span class="price">40€</span>
+                    </div>
+
+                    <div class="list-card">
+                        <input type="checkbox" id="plat-5" class="plat-toggle">
                         <div class="animation-block">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </div>
-                    <div class="list-card">
                         <div class="list-content">
                             <h4 class="list-title">Langouste rôtie</h4>
                             <span class="list-subtitle">Et ses légumes de saison</span>
                         </div>
                         <span class="price">35€</span>
+                    </div>
+
+                    <div class="list-card">
+                        <input type="checkbox" id="plat-6" class="plat-toggle">
                         <div class="animation-block">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </div>
-                    <div class="list-card">
                         <div class="list-content">
                             <h4 class="list-title">Côte de bœuf Angus</h4>
                             <span class="list-subtitle">Et sa purée de panais</span>
                         </div>
                         <span class="price">44€</span>
-                        <div class="animation-block">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
                     </div>
                 </section>
             </div>
         </div>
-        <!-- desserts -->
 
+
+
+        <!-- Desserts -->
         <div class="menu-lists">
             <div class="menu-title">
                 <h3>Desserts</h3>
                 <section class="lists">
                     <div class="list-card">
+                        <input type="checkbox" id="plat-7" class="plat-toggle">
+                        <div class="animation-block">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                         <div class="list-content">
                             <h4 class="list-title">Farandole de desserts</h4>
                             <span class="list-subtitle">Du chef</span>
                         </div>
                         <span class="price">18€</span>
+                    </div>
+
+                    <div class="list-card">
+                        <input type="checkbox" id="plat-8" class="plat-toggle">
                         <div class="animation-block">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </div>
-                    <div class="list-card">
                         <div class="list-content">
                             <h4 class="list-title">Crème brulée</h4>
                             <span class="list-subtitle">Revisitée</span>
                         </div>
                         <span class="price">22€</span>
+                    </div>
+
+                    <div class="list-card">
+                        <input type="checkbox" id="plat-9" class="plat-toggle">
                         <div class="animation-block">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </div>
-                    <div class="list-card">
                         <div class="list-content">
                             <h4 class="list-title">Tiramisu</h4>
                             <span class="list-subtitle">À la noisette</span>
                         </div>
                         <span class="price">23€</span>
-                        <div class="animation-block">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
                     </div>
                 </section>
             </div>
         </div>
+
         <div class="Bcommande">
             <button class="commande">Commander</button>
         </div>
@@ -158,14 +178,12 @@
     <footer>
         <div class="footer">
             <span class="logo-img">ohmyfood</span>
-            <a href="#">
-                <ul class="footer-list">
-                    <li><i class="fa-solid fa-utensils"></i> <span>Proposer un restaurant</span></li>
-                    <li><i class="fa-solid fa-handshake-angle"></i> <span>Devenir partenaire</span></li>
-                    <li><span>Mentions légales</span></li>
-                    <li><span>Contact</span></li>
-                </ul>
-            </a>
+            <ul class="footer-list">
+                <li><i class="fa-solid fa-utensils"></i> <span><a>Proposer un restaurant</a></span></li>
+                <li><i class="fa-solid fa-handshake-angle"></i> <span><a>Devenir partenaire</a></span></li>
+                <li><span><a>Mentions légales</a></span></li>
+                <li><span><a href="mailto:email@example.com">Contact</a></span></li>
+            </ul>
         </div>
     </footer>
 </body>

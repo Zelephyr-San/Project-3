@@ -1,0 +1,387 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: roboto, sans-serif;
+}
+
+/* Header */
+.new-header {
+  padding: 20px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+}
+.new-header .header-fleche {
+  position: absolute;
+  left: 40px;
+  height: 24px;
+  width: 21px;
+  top: 50%;
+  display: flex;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #000;
+}
+.new-header img {
+  align-items: center;
+  width: 150px;
+}
+
+/* Animation concernant le coeur a coter du titre */
+.heart-toggle {
+  display: none;
+}
+
+.coeur {
+  position: relative;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 1px;
+}
+.coeur::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: transparent;
+  position: absolute;
+  top: 4px;
+  left: 1px;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease, background 0.7s ease;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+}
+.heart-toggle:checked + .coeur::before {
+  animation: fillHeart 1s ease forwards, pulseHeart 1s ease 1;
+  background: linear-gradient(360deg, #ff88f3, #9100ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart-toggle:not(:checked) + .coeur::before {
+  animation: pulseDisappear 1s ease forwards;
+  background: linear-gradient(360deg, #ff88f3, #9100ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animation de remplissage progressif */
+@keyframes fillHeart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Animation de pulsation */
+@keyframes pulseHeart {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+/* Animation de pulsation et disparition (réduite à 1 seconde) */
+@keyframes pulseDisappear {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3); /* Pulsation */
+  }
+  100% {
+    transform: scale(0); /* Rétrécissement jusqu'à disparition */
+  }
+}
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px 40px 0 0;
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: -50px;
+}
+.main-menu .menu-titre {
+  padding: 15px 10px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Shrikhand, "cursive";
+  /* Coeur et animation */
+  /* Animation de remplissage progressif */
+  /* Animation de pulsation */
+  /* Animation de pulsation et disparition */
+}
+.main-menu .menu-titre .heart-toggle {
+  display: none;
+}
+.main-menu .menu-titre .coeur {
+  position: relative;
+  cursor: pointer;
+  font-size: 24px;
+  top: 0px;
+  right: 50px;
+}
+color .main-menu .menu-titre .coeur::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: transparent;
+  position: absolute;
+  top: 4px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: color 0.7s, transform 0.7s;
+  transform: scale(0);
+}
+.heart-toggle:checked + .main-menu .menu-titre .coeur::before {
+  animation: fillHeart 1s ease forwards, pulseHeart 1s ease 1;
+  background: linear-gradient(360deg, #ff88f3, #9100ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart-toggle:not(:checked) + .main-menu .menu-titre .coeur::before {
+  animation: pulseDisappear 1s ease forwards;
+  background: linear-gradient(360deg, #ff88f3, #9100ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes fillHeart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pulseHeart {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+@keyframes pulseDisappear {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.cover-resto img {
+  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+}
+
+/* Menu */
+.menu-lists {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 16px;
+  padding: 10px;
+  background-color: #f6f6f6;
+}
+.menu-lists .menu-title h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+}
+.menu-lists .menu-title h3::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 3px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* Card Menu */
+.lists {
+  padding: 10px;
+}
+.lists .list-card {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  /* Cacher la checkbox mais permettre l'interaction */
+  /* Bloc d'animation vert */
+  /* Lorsque la checkbox est cochée */
+  /* Coche blanche visible après l'animation */
+  /* Le prix est déplacé suffisamment pour être hors du bloc vert */
+  /* Lorsque le prix bouge, le contenu reste dans son cadre mais se rétrécit */
+}
+.lists .list-card input.plat-toggle {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.lists .list-card .list-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Le contenu occupe tout l'espace restant */
+  overflow: hidden; /* Empêcher le chevauchement avec le prix */
+}
+.lists .list-card .list-title,
+.lists .list-card .list-subtitle {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 1; /* Rétrécir le contenu au lieu de le déplacer */
+  transition: width 0.3s ease-in-out;
+}
+.lists .list-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-left: 20px;
+  white-space: nowrap;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  z-index: 3;
+}
+.lists .list-card .animation-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%; /* Bloc vert couvre 15% de la carte */
+  height: 100%;
+  background-color: #75d8b1;
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+  pointer-events: none;
+  /* Centrage et style de l'icône de coche */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lists .list-card .animation-block i {
+  color: white;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.lists .list-card input.plat-toggle:checked ~ .animation-block {
+  transform: scaleX(1);
+}
+.lists .list-card input.plat-toggle:checked ~ .animation-block i {
+  opacity: 1;
+}
+.lists .list-card input.plat-toggle:checked ~ .price {
+  transform: translateX(-200%);
+}
+.lists .list-card input.plat-toggle:checked ~ .list-content .list-title,
+.lists .list-card input.plat-toggle:checked ~ .list-content .list-subtitle {
+  width: 80%; /* Ajuste la largeur pour permettre au texte de se réduire */
+}
+
+/* Boutton Commander */
+.Bcommande {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 32px 0;
+}
+.Bcommande .commande {
+  border: 0;
+  padding: 16px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition-duration: 0.25s;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.Bcommande .commande:hover {
+  filter: brightness(2.9);
+}
+
+/* Pied de page */
+.footer {
+  background: #2e2e2e;
+  padding: 20px;
+}
+.footer a {
+  color: white;
+  /* Assure que les liens sont blancs */
+  text-decoration: none;
+  /* Supprime le soulignement des liens */
+}
+.footer span {
+  color: white;
+  /* Assure que le texte dans les span est blanc */
+  text-decoration: none;
+}
+.footer .logo-img {
+  font-size: 16px;
+  color: white;
+  font-family: "Shrikhand", cursive;
+  padding: 2px;
+}
+.footer .footer-list {
+  color: rgba(255, 255, 255, 0.861);
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+.footer .footer-list li {
+  list-style: none;
+}
+
+* {
+  outline: 1px solid red;
+}/*# sourceMappingURL=style_resto.css.map */

@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood</title>
-    <link rel="stylesheet" href="/ohmyfood/SASS/style.css">
+    <link rel="stylesheet" href="/ohmyfood/SASS/style_resto.css">
+    <link rel="stylesheet" href="/ohmyfood/SASS/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -27,19 +28,21 @@
             <div class="container">
                 <div class="menu-titre">
                     <h2>À la française</h2>
-                    <button class="menu-icon">
-                        <i class="far fa-heart btn-heart--outline"></i>
-                    </button>
+                    <input type="checkbox" id="heart-toggle-0" class="heart-toggle">
+                    <label for="heart-toggle-0" class="coeur">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                    </label>
                 </div>
             </div>
         </section>
-        <!-- Entrées -->
 
+        <!-- Entrées -->
         <div class="menu-lists">
             <div class="menu-title">
                 <h3>Entrées</h3>
                 <section class="lists">
                     <div class="list-card">
+                        <input type="checkbox" id="plat-1" class="plat-toggle">
                         <div class="list-content">
                             <h4 class="list-title">Tartare de poulpe acidulé</h4>
                             <span class="list-subtitle">Aux zestes d'orange</span>
@@ -50,6 +53,7 @@
                         </div>
                     </div>
                     <div class="list-card">
+                        <input type="checkbox" id="plat-2" class="plat-toggle">
                         <div class="list-content">
                             <h4 class="list-title">Velouté de légumes d'antan</h4>
                             <span class="list-subtitle">Carotte, panais, topinambour</span>
@@ -60,6 +64,7 @@
                         </div>
                     </div>
                     <div class="list-card">
+                        <input type="checkbox" id="plat-3" class="plat-toggle">
                         <div class="list-content">
                             <h4 class="list-title">Soupe à l'oignon</h4>
                             <span class="list-subtitle">Revisitée</span>
@@ -72,17 +77,17 @@
                 </section>
             </div>
         </div>
-        <!-- plats -->
 
+        <!-- Plats -->
         <div class="menu-lists">
             <div class="menu-title">
                 <h3>Plats</h3>
                 <section class="lists">
                     <div class="list-card">
+                        <input type="checkbox" id="plat-4" class="plat-toggle">
                         <div class="list-content">
                             <h4 class="list-title">Coquilles Saint-Jacques</h4>
-                            <span class="list-subtitle">Accompagnées d'une purée de panais
-                            </span>
+                            <span class="list-subtitle">Accompagnées d'une purée de panais</span>
                         </div>
                         <span class="price">40€</span>
                         <div class="animation-block">
@@ -90,6 +95,7 @@
                         </div>
                     </div>
                     <div class="list-card">
+                        <input type="checkbox" id="plat-5" class="plat-toggle">
                         <div class="list-content">
                             <h4 class="list-title">Magret de canard</h4>
                             <span class="list-subtitle">Et parmentier de pommes de terre</span>
@@ -100,6 +106,7 @@
                         </div>
                     </div>
                     <div class="list-card">
+                        <input type="checkbox" id="plat-6" class="plat-toggle">
                         <div class="list-content">
                             <h4 class="list-title">Pigeonneau d’Ille-et-Vilaine</h4>
                             <span class="list-subtitle">Sur son lit de gnocchis aux légumes</span>
@@ -112,13 +119,13 @@
                 </section>
             </div>
         </div>
-        <!-- desserts -->
-
+        <!-- Desserts -->
         <div class="menu-lists">
             <div class="menu-title">
                 <h3>Desserts</h3>
                 <section class="lists">
                     <div class="list-card">
+                        <input type="checkbox" id="plat-7" class="plat-toggle">
                         <div class="list-content">
                             <h4 class="list-title">Pétales de violettes glacés</h4>
                             <span class="list-subtitle">Et purée de noisettes</span>
@@ -129,6 +136,7 @@
                         </div>
                     </div>
                     <div class="list-card">
+                        <input type="checkbox" id="plat-8" class="plat-toggle">
                         <div class="list-content">
                             <h4 class="list-title">Fondant au chocolat</h4>
                             <span class="list-subtitle">Revisité</span>
@@ -139,6 +147,7 @@
                         </div>
                     </div>
                     <div class="list-card">
+                        <input type="checkbox" id="plat-9" class="plat-toggle">
                         <div class="list-content">
                             <h4 class="list-title">Millefeuille croustillant</h4>
                             <span class="list-subtitle">Myrtilles et pâte d’amande</span>
@@ -151,6 +160,7 @@
                 </section>
             </div>
         </div>
+
         <div class="Bcommande">
             <button class="commande">Commander</button>
         </div>
@@ -159,18 +169,14 @@
     <footer>
         <div class="footer">
             <span class="logo-img">ohmyfood</span>
-            <a href="#">
-                <ul class="footer-list">
-                    <li><i class="fa-solid fa-utensils"></i> <span>Proposer un restaurant</span></li>
-                    <li><i class="fa-solid fa-handshake-angle"></i> <span>Devenir partenaire</span></li>
-                    <li><span>Mentions légales</span></li>
-                    <li><span>Contact</span></li>
-                </ul>
-            </a>
+            <ul class="footer-list">
+                <li><i class="fa-solid fa-utensils"></i> <span><a>Proposer un restaurant</a></span></li>
+                <li><i class="fa-solid fa-handshake-angle"></i> <span><a>Devenir partenaire</a></span></li>
+                <li><span><a>Mentions légales</a></span></li>
+                <li><span><a href="mailto:email@example.com">Contact</a></span></li>
+            </ul>
         </div>
     </footer>
 </body>
-
-
 
 </html>
