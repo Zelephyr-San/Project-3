@@ -34,7 +34,7 @@ body {
     text-align: center;
     flex-direction: column;
     align-items: center;
-    background: #f5f0f5;
+    background: #F6F6F6;
     .Titre1 {
         font-size: 14px;
         padding-top: 30px;
@@ -80,7 +80,7 @@ body {
 
 .search-container {
     width: 100%;
-    background-color: #efe3e6;
+    background-color: #EAEAEA;
     display: flex;
     justify-content: center;
     padding: 12px 0;
@@ -100,7 +100,7 @@ body {
         .champ-recherche input {
             padding: 8px;
             border: none;
-            background-color: #EBE6EB;
+            background-color: #EAEAEA;
             font-weight: bold;
             text-align: center;
         }
@@ -149,7 +149,7 @@ body {
             }
 
             p {
-                background: #9356dc;
+                background: #9356DC;
                 height: 24px;
                 width: 25px;
                 border-radius: 100px;
@@ -172,7 +172,7 @@ body {
             }
 
             .icone-fonction {
-                border: 1px solid #f2f2f2;
+                border: 1px solid #F6F6F6;
                 background: white;
                 padding: 20px;
                 border-radius: 15px;
@@ -184,7 +184,7 @@ body {
                 background: #f5f0f5;
 
                 &:hover i {
-                    color: #9356dc; // Couleur de l'icône au survol
+                    color: #9356DC; // Couleur de l'icône au survol
                 }
             }
         }
@@ -196,13 +196,13 @@ body {
     padding: 20px;
     font-size: 23px;
     font-weight: bold;
-    background: #f5f0f5;
+    background: #F6F6F6;
 }
 
 .main__card-resto {
     max-width: 100%;
     overflow: hidden;
-    background-color: #f5f0f5;
+    background-color: #F6F6F6;
 
     .cards {
         h3 {

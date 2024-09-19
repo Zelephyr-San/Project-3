@@ -34,7 +34,7 @@ body header .logo img {
   text-align: center;
   flex-direction: column;
   align-items: center;
-  background: #f5f0f5;
+  background: #F6F6F6;
   /* Boutton Explorer nos restaurants */
 }
 .main-container .Titre1 {
@@ -75,7 +75,7 @@ body header .logo img {
 
 .search-container {
   width: 100%;
-  background-color: #efe3e6;
+  background-color: #EAEAEA;
   display: flex;
   justify-content: center;
   padding: 12px 0;
@@ -94,7 +94,7 @@ body header .logo img {
 .search-container .recherche .champ-recherche input {
   padding: 8px;
   border: none;
-  background-color: #EBE6EB;
+  background-color: #EAEAEA;
   font-weight: bold;
   text-align: center;
 }
@@ -135,7 +135,7 @@ body header .logo img {
   margin-left: 50px;
 }
 .fonction-section .fonctions .fonction p {
-  background: #9356dc;
+  background: #9356DC;
   height: 24px;
   width: 25px;
   border-radius: 100px;
@@ -156,7 +156,7 @@ body header .logo img {
   transition: color 0.3s ease;
 }
 .fonction-section .fonctions .fonction .icone-fonction {
-  border: 1px solid #f2f2f2;
+  border: 1px solid #F6F6F6;
   background: white;
   padding: 20px;
   border-radius: 15px;
@@ -168,7 +168,7 @@ body header .logo img {
   background: #f5f0f5;
 }
 .fonction-section .fonctions .fonction .icone-fonction:hover i {
-  color: #9356dc;
+  color: #9356DC;
 }
 
 /* Restaurant */
@@ -176,13 +176,13 @@ body header .logo img {
   padding: 20px;
   font-size: 23px;
   font-weight: bold;
-  background: #f5f0f5;
+  background: #F6F6F6;
 }
 
 .main__card-resto {
   max-width: 100%;
   overflow: hidden;
-  background-color: #f5f0f5;
+  background-color: #F6F6F6;
 }
 .main__card-resto .cards h3 {
   font-weight: 400;
