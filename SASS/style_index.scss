@@ -26,6 +26,48 @@ body {
         }
     }
 }
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; 
+    z-index: 9999; 
+    animation: fadeOut 2s forwards 2s; 
+    .loader {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #9356DC;
+        border-radius: 50%;
+        animation: spin 1s linear infinite; 
+      }
+
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+  }
+
+
+
+
 
 .main-container {
     width: 100%;
@@ -184,7 +226,7 @@ body {
                 background: #f5f0f5;
 
                 &:hover i {
-                    color: #9356DC; // Couleur de l'icône au survol
+                    color: #9356DC; 
                 }
             }
         }
@@ -378,12 +420,12 @@ body {
     padding: 20px;
 
     a {
-        color: white; /* Assure que les liens sont blancs */
-        text-decoration: none; /* Supprime le soulignement des liens */
+        color: white; 
+        text-decoration: none; 
     }
 
     span {
-        color: white; /* Assure que le texte dans les span est blanc */
+        color: white; 
         text-decoration: none;
     }
 
