@@ -163,6 +163,22 @@
     list-style: none;
   }
 }
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  .price {
+    font-size: 16px;
+  }
+  input.plat-toggle:checked ~ .price {
+    padding-left: 30px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 700px) {
+  .price {
+    font-size: 16px;
+  }
+  input.plat-toggle:checked ~ .price {
+    padding-left: 5px;
+  }
+}
 /* --- PAGE RESTAURANT --- */
 /* --- 1. HEADER --- */
 /* Ajout des styles pour des écrans plus grands (tablettes et desktop) */
